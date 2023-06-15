@@ -52,6 +52,8 @@ CREATE TABLE IF NOT EXISTS tur
     PRIMARY KEY (id)
 );
 
+ALTER TABLE ogrenci ADD CONSTRAINT unique_id UNIQUE (id);
+
 ALTER TABLE IF EXISTS islem
     ADD FOREIGN KEY (ogrenci_id)
     REFERENCES ogrenci (id) MATCH SIMPLE
